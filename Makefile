@@ -9,10 +9,37 @@ init:
 build:
 	go build -o bin/kentykenty-bot ./cmd
 
+build-macos:
+	@make _build BUILD_OS=darwin BUILD_ARCH=amd64
+
+build-linux:
+	@make _build BUILD_OS=linux BUILD_ARCH=amd64
 
 # build binary for Raspberry Pi
 build-arm6:
-	GOOS=linux GOARCH=arm GOARM=6 go build -o bin/arm6 ./cmd
+	@make _build BUILD_OS=linux BUILD_ARCH=arm BUILD_ARM=6
+
+build-arm7:
+	@make _build BUILD_OS=linux BUILD_ARCH=arm BUILD_ARM=7
+
+_build:
+	@mkdir -p bin/release
+	$(eval BUILD_OUTPUT := kentykenty-bot_${BUILD_OS}_${BUILD_ARCH}${BUILD_ARM})
+	GOOS=${BUILD_OS} \
+	GOARCH=${BUILD_ARCH} \
+	GOARM=${BUILD_ARM} \
+	go build -o bin/${BUILD_OUTPUT} ./cmd
+	@if [ "${USE_ARCHIVE}" = "1" ]; then \
+		gzip -k -f bin/${BUILD_OUTPUT} ;\
+		mv bin/${BUILD_OUTPUT}.gz bin/release/ ;\
+	fi
+
+build-all: clean
+	@make build-macos build-linux build-arm6 build-arm7 USE_ARCHIVE=1
+
+clean:
+	rm -f bin/kentykenty-bot_*
+	rm -f bin/release/*
 
 # run bot on local environment
 dev:
