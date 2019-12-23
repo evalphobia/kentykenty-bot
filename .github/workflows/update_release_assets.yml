@@ -35,4 +35,4 @@ jobs:
         export GOPATH=$(go env GOPATH)
         go get -u github.com/tcnksm/ghr
         echo "Upload version [${{ steps.tag.outputs.version }}]"
-        ${GOPATH}/bin/ghr -delete -replace ${{ steps.tag.outputs.version }} bin/release
+        ${GOPATH}/bin/ghr -replace ${{ steps.tag.outputs.version }} bin/release
