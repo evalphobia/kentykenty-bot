@@ -22,7 +22,7 @@ jobs:
     - name: Get tag version
       id: tag
       run: |
-        TAG=$(git tag --points-at HEAD)
+        TAG=$(git tag --sort=-v:refname --points-at HEAD | head -n 1)
         echo ::set-output name=version::${TAG}
 
     - name: Cross compile
