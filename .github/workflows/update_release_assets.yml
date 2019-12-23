@@ -1,9 +1,9 @@
 name: Build and update release assets
 on:
-  release:
-    types:
-      - created
-      - edited
+  push:
+    tags:
+      - v*
+
 
 jobs:
   assets:
