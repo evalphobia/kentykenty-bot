@@ -13,10 +13,10 @@ github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSs
 github.com/eure/bobo v0.0.1/go.mod h1:GfT49bmXcMIq8sTAUgq+8+kmVLgdGmZn+1Jm9iEQG5A=
 github.com/eure/bobo v0.0.3 h1:jpUC57buuWv8AtA/uOq76X9QPzRStUSDpKzjN7J9cqQ=
 github.com/eure/bobo v0.0.3/go.mod h1:k4xCDIWzmHrYx+91yhFVNTH79nBd13Blz6q9KSVl+cc=
-github.com/evalphobia/aws-sdk-go-wrapper v1.8.2 h1:46E/BYFZqjFHplUM0i6k5M+aqK571F0t4E9q9n30kY4=
-github.com/evalphobia/aws-sdk-go-wrapper v1.8.2/go.mod h1:TkayNiFwRHa4b+5qhDfNucvo1rYZmLxxAzXzukzcFA8=
-github.com/evalphobia/bobo-experiment v0.0.2 h1:MD84Tf/bhoZjD7j8EfTUkmGZ4Adq1O7H+j75cs1Z5BY=
-github.com/evalphobia/bobo-experiment v0.0.2/go.mod h1:306BYp228L+VfoaxFAC1QjqSH0VLxti7qj6Q9eay75A=
+github.com/evalphobia/aws-sdk-go-wrapper v1.8.4 h1:j+yCOc0jESq5aENa5DTDbmIc05Q+Ktdh4K85obvX4wI=
+github.com/evalphobia/aws-sdk-go-wrapper v1.8.4/go.mod h1:TkayNiFwRHa4b+5qhDfNucvo1rYZmLxxAzXzukzcFA8=
+github.com/evalphobia/bobo-experiment v0.0.3 h1:HysBBM1+0UAJ8dX1zqUNN4pVSjSokYTayu362B7PyeM=
+github.com/evalphobia/bobo-experiment v0.0.3/go.mod h1:Nh2vzQyahHcbzhgWmIswwoEnI8ZniZA2uxBQTEgzods=
 github.com/evalphobia/go-face-plusplus v0.1.0 h1:BjpgSvHSA4oK9lbbUm8nQluQEhw5YI+3nbKOAyIOstA=
 github.com/evalphobia/go-face-plusplus v0.1.0/go.mod h1:nus4lZk0Ge4hY+NHzklrmk++3FhSU+gadbchXLHiOKQ=
 github.com/evalphobia/google-api-go-wrapper v0.8.2 h1:wHvt9m4ZkBDG6zGlzuvyvX1GMNCqKVRx+zpuoglS5/Q=
