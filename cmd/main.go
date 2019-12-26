@@ -44,6 +44,7 @@ func main() {
 			bobocommand.HelpCommand,
 			aws.CostCommand{},
 			aws.SQSCommand{},
+			aws.DynamoDBCommand{},
 			google.CalendarCommand,
 			google.WhereCommand,
 			&faceplusplus.MergeCommand{},
