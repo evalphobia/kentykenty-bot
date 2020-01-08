@@ -1,13 +1,17 @@
 .PHONY: init build build-arm6 dev lint test
 
 GO111MODULE=on
+VERSION := $(shell git tag --points-at HEAD --sort=-v:refname | head -n 1)
+REVISION := $(shell git rev-parse --short HEAD)
+LDFLAGS := -X 'main.version=$(VERSION)' \
+           -X 'main.revision=$(REVISION)'
 
 init:
 	go mod download
 
 # build binary
 build:
-	go build -o bin/kentykenty-bot ./cmd
+	go build -ldflags "$(LDFLAGS)" -o bin/kentykenty-bot ./cmd
 
 build-macos:
 	@make _build BUILD_OS=darwin BUILD_ARCH=amd64

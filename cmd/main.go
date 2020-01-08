@@ -47,6 +47,7 @@ func main() {
 			aws.DynamoDBCommand{},
 			google.CalendarCommand,
 			google.WhereCommand,
+			&google.RoomCommand{},
 			&faceplusplus.MergeCommand{},
 			command.MergeYui,
 			command.MergeAoi,
