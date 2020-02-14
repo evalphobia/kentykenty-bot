@@ -42,7 +42,7 @@ func main() {
 			bobocommand.GoodMorningCommand,
 			bobocommand.ReloadCommand,
 			bobocommand.HelpCommand,
-			aws.CostCommand{},
+			aws.CostCommandByCostExplorer{},
 			aws.SQSCommand{},
 			aws.DynamoDBCommand{},
 			google.CalendarCommand,
